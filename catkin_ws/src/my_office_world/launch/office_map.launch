@@ -1,0 +1,7 @@
+<launch>
+  <arg name="world_file" default="$(find my_office_world)/worlds/office.world"/>
+
+  <node name="gazebo" pkg="gazebo_ros" type="gazebo" output="screen"
+        args="-s libgazebo_ros_factory.so $(arg world_file)"/>
+</launch>
+
