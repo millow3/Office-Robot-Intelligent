@@ -17,20 +17,26 @@ Mohammad Farihin bin Roslan (A201909)
 
 🚀 How to Run
 1. Launch Office World:
+
 export TURTLEBOT3_MODEL=burger
 roslaunch turtlebot3_gazebo turtlebot3_house.launch
 
 2. Run SLAM + RViz:
+
 roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
 
 3. Teleoperate to Explore:
+
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
 4. Save Map:
+   
 rosrun map_server map_saver -f ~/map/office_map
 
 5. Launch Navigation with Saved Map:
+    
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/farihin/map/office_map.yaml
 
 6. Run Multi-Point Navigation Script:
+    
 rosrun my_office_world multi_nav.py
